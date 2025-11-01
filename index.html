@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelBloom Studio | Boutique Digital Design Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; display: flex; align-items: baseline; gap: 8px;">
+                        <span class="logo-text">PixelBloom</span>
+                        <span class="logo-accent">Studio</span>
+                    </a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About/index.html">About</a></li>
+                    <li><a href="Services/index.html">Services</a></li>
+                    <li><a href="Contact/index.html">Contact</a></li>
+                    <li><a href="Profile/index.html">Profile</a></li>
+                    <li><a href="Settings/index.html">Settings</a></li>
+                    <li><a href="Help/index.html">Help</a></li>
+                    <li><a href="Feedback/index.html">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">PixelBloom</span>
+                    <span class="title-sub">Studio</span>
+                </h1>
+                <p class="hero-tagline">Designs that grow with your brand</p>
+                <p class="hero-description">We craft elegant digital experiences that help your business bloom. A boutique design agency specializing in creative excellence and pixel-perfect precision.</p>
+                <div class="hero-buttons">
+                    <a href="Services/index.html" class="btn btn-primary">Explore Services</a>
+                    <a href="Contact/index.html" class="btn btn-secondary">Start a Project</a>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+                <div class="decoration-circle circle-3"></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Creative Excellence</h3>
+                    <p>Innovative designs that stand out</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Pixel Perfect</h3>
+                    <p>Meticulous attention to detail</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Brand Growth</h3>
+                    <p>Designs that scale with you</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 PixelBloom Studio. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
