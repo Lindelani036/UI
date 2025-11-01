@@ -3,16 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Profile | PixelBloom Studio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../theme.js"></script>
 </head>
 <body>
     <header>
-        <h1>Profile</h1>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; display: flex; align-items: baseline; gap: 8px;">
+                        <span class="logo-text">PixelBloom</span>
+                        <span class="logo-accent">Studio</span>
+                    </a>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-toggle-icon sun">☀️</span>
+                        <span class="theme-toggle-icon moon">🌙</span>
+                    </button>
+                    <div class="menu-toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../About/index.html">About</a></li>
+                    <li><a href="../Services/index.html">Services</a></li>
+                    <li><a href="../Contact/index.html">Contact</a></li>
+                    <li><a href="index.html" class="active">Profile</a></li>
+                    <li><a href="../Settings/index.html">Settings</a></li>
+                    <li><a href="../Help/index.html">Help</a></li>
+                    <li><a href="../Feedback/index.html">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
+    
     <main>
-        <p>Profile page content goes here.</p>
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Profile</h1>
+                <p class="page-subtitle">Coming soon</p>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 PixelBloom Studio. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
 

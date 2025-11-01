@@ -3,16 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us | PixelBloom Studio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
 </head>
 <body>
     <header>
-        <h1>Contact</h1>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; display: flex; align-items: baseline; gap: 8px;">
+                        <span class="logo-text">PixelBloom</span>
+                        <span class="logo-accent">Studio</span>
+                    </a>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-toggle-icon sun">☀️</span>
+                        <span class="theme-toggle-icon moon">🌙</span>
+                    </button>
+                    <div class="menu-toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../About/index.html">About</a></li>
+                    <li><a href="../Services/index.html">Services</a></li>
+                    <li><a href="index.html" class="active">Contact</a></li>
+                    <li><a href="../Profile/index.html">Profile</a></li>
+                    <li><a href="../Settings/index.html">Settings</a></li>
+                    <li><a href="../Help/index.html">Help</a></li>
+                    <li><a href="../Feedback/index.html">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
+    
     <main>
-        <p>Contact page content goes here.</p>
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1 class="page-title">Get in Touch</h1>
+                <p class="page-subtitle">Let's bring your vision to life together</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <h2 class="form-title">Send us a Message</h2>
+                        <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Interest</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="website-design">Custom Website Design</option>
+                                    <option value="brand-identity">Brand Identity</option>
+                                    <option value="ux-ui">UX/UI Optimization</option>
+                                    <option value="mobile-design">Mobile-First Design</option>
+                                    <option value="redesign">Website Redesign</option>
+                                    <option value="consulting">Consulting & Strategy</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Project Details</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <div class="form-group form-checkbox">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter for design tips and updates</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <span class="btn-arrow">→</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info-wrapper">
+                        <div class="contact-info-card">
+                            <h2 class="info-title">Contact Information</h2>
+                            <p class="info-subtitle">We'd love to hear from you. Reach out anytime!</p>
+                            
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">📧</div>
+                                    <div class="contact-item-content">
+                                        <h4>Email Us</h4>
+                                        <a href="mailto:hello@pixelbloom.studio">hello@pixelbloom.studio</a>
+                                        <a href="mailto:info@pixelbloom.studio">info@pixelbloom.studio</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon">📞</div>
+                                    <div class="contact-item-content">
+                                        <h4>Call Us</h4>
+                                        <a href="tel:+1234567890">+1 (234) 567-8900</a>
+                                        <p class="contact-note">Mon-Fri, 9AM - 6PM EST</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon">📍</div>
+                                    <div class="contact-item-content">
+                                        <h4>Visit Us</h4>
+                                        <p>123 Design Street<br>Creative District, NY 10001<br>United States</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon">💬</div>
+                                    <div class="contact-item-content">
+                                        <h4>Social Media</h4>
+                                        <div class="social-links">
+                                            <a href="#" class="social-link">Instagram</a>
+                                            <a href="#" class="social-link">LinkedIn</a>
+                                            <a href="#" class="social-link">Twitter</a>
+                                            <a href="#" class="social-link">Behance</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Quick Links -->
+                        <div class="faq-quick-links">
+                            <h3>Quick Links</h3>
+                            <ul class="quick-links-list">
+                                <li><a href="../Services/index.html">Our Services</a></li>
+                                <li><a href="../About/index.html">About Us</a></li>
+                                <li><a href="#faq">Frequently Asked Questions</a></li>
+                                <li><a href="#process">Our Process</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How long does a typical project take?</h3>
+                        <p>Most website projects take 4-8 weeks from initial consultation to launch. Brand identity projects typically take 3-6 weeks. Timeline depends on project scope and client feedback cycles.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What's included in your website design package?</h3>
+                        <p>Our custom website design includes responsive design for all devices, SEO optimization, user experience optimization, performance tuning, and up to 3 rounds of revisions.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you provide ongoing support?</h3>
+                        <p>Yes! We offer maintenance packages for updates, security, and content changes. We also provide training sessions to help you manage your site independently.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What's your pricing structure?</h3>
+                        <p>Pricing varies based on project scope. We offer custom quotes after understanding your needs. Contact us for a free consultation and personalized estimate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 PixelBloom Studio. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        // Dark mode functionality
+        const setTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        };
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+            themeToggle.style.transform = 'rotate(360deg) scale(1.1)';
+            setTimeout(() => { themeToggle.style.transform = ''; }, 300);
+        });
+        
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Form submission handling
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
-
