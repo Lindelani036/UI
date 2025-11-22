@@ -12,6 +12,8 @@
     </script>
 </head>
 <body>
+    <!-- 3D scene container: full-viewport canvas rendered by Three.js -->
+    <div id="scene-container" aria-hidden="true"></div>
     <header>
         <nav class="navbar">
             <div class="nav-container">
@@ -94,6 +96,10 @@
         </div>
     </footer>
     
+    <!-- Three.js (CDN) and site 3D scene -->
+    <script src="https://unpkg.com/three@0.154.0/build/three.min.js" defer></script>
+    <script src="scripts/3d-scene.js" defer></script>
+
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
